@@ -1,16 +1,67 @@
-1 Create Project Structure
+1 Create Project Structure (frontend)
 
-ReactWebApp/
-├── frontend/
-│   └── ... (React files)
-├── backend/
-│   ├── my_project/
-│   ├── apps/
-│   │   ├── chat/
-│   │   └── users/
-│   ├── manage.py
-│   └── requirements.txt
+frontend/
+├── node_modules/
+├── public/
+│   ├── index.html
+│   ├── favicon.ico
+│   └── manifest.json
+├── src/
+│   ├── components/
+│   │   ├── Sidebar/
+│   │   │   ├── Sidebar.js
+│   │   │   └── Sidebar.css
+│   │   ├── TopNavBar/
+│   │   │   ├── TopNavBar.js
+│   │   │   └── TopNavBar.css
+│   │   └── ChatInterface/
+│   │       ├── ChatInterface.js
+│   │       └── ChatInterface.css
+│   ├── pages/
+│   │   ├── Home/
+│   │   │   ├── Home.js
+│   │   │   └── Home.css
+│   │   ├── Page1/
+│   │   │   ├── Page1.js
+│   │   │   └── Page1.css
+│   │   └── Page2/
+│   │       ├── Page2.js
+│   │       └── Page2.css
+│   ├── context/
+│   │   ├── AuthContext.js
+│   │   └── ChatContext.js
+│   ├── services/
+│   │   └── api.js
+│   ├── utils/
+│   │   └── helpers.js
+│   ├── App.js
+│   ├── App.css
+│   ├── index.js
+│   └── index.css
+├── package.json
+├── package-lock.json
 └── README.md
+
+backend/
+├── my_project/
+│   ├── __init__.py
+│   ├── settings.py
+│   ├── urls.py
+│   ├── asgi.py
+│   └── wsgi.py
+├── apps/
+│   ├── chat/
+│   │   ├── __init__.py
+│   │   ├── models.py
+│   │   ├── views.py
+│   │   └── urls.py
+│   └── users/
+│       ├── __init__.py
+│       ├── models.py
+│       ├── views.py
+│       └── urls.py
+├── manage.py
+└── requirements.txt
 
 2 Set Up Virtual Environment
 
@@ -99,26 +150,20 @@ Database Migration Issues
     Delete migration files
     Rerun migrations
 
-12 Project Structue Details
 
-backend/
-├── my_project/
-│   ├── __init__.py
-│   ├── settings.py
-│   ├── urls.py
-│   ├── asgi.py
-│   └── wsgi.py
-├── apps/
-│   ├── chat/
-│   │   ├── __init__.py
-│   │   ├── models.py
-│   │   ├── views.py
-│   │   └── urls.py
-│   └── users/
-│       ├── __init__.py
-│       ├── models.py
-│       ├── views.py
-│       └── urls.py
-├── manage.py
-└── requirements.txt
+
+
+#####################  Backend Setup
+
+cd backend
+.\venv\Scripts\activate
+py manage.py runserver
+
+#####################  Frontend Setup
+
+cd frontend
+npm start
+
+
+
 
